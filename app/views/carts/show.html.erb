@@ -34,6 +34,12 @@
   </div>
 
   <div class="row">
+
+  <% if enhanced_cart.length == 0 %>
+  <br>
+  <ul> <%= link_to 'Start Shopping!', :root, class: 'btn btn-info' %> </ul>
+  <br>
+  <% else %>
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
         <script
@@ -46,6 +52,7 @@
           data-email="kvirani@gmail.com"
           data-currency="cad">
         </script>
+      <% end %>
       <% end %>
     </div>
   </div>
