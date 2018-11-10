@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :ratings
+  resources :ratings
+
   root to: 'products#index'
 
   resources :products, only: [:index, :show]
